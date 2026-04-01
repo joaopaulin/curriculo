@@ -5,7 +5,4 @@ Este repositório contém a versão online detalhada do meu currículo e das min
 Gerado via **Spec Driven Development** assistido por IA.
 
 ## Como Visualizar
-Você pode visualizar o currículo abrindo o arquivo `index.html` em qualquer navegador moderno.
-
----
-© 2026 João Paulin — Engenharia de Software com Precisão.
+Você pode acessar a versão online em: [https://joaopaulin.github.io/curriculo](https://joaopaulin.github.io/curriculo)
