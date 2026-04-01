@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Paulin | Software Engineer | Backend Specialist | PHP & Node.js</title>
+    <meta name="description" content="João Paulin é um Desenvolvedor Backend com mais de 15 anos de experiência, especializado em sistemas de alto impacto (LMS), performance, escalabilidade e entusiasta de SDD.">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="João Paulin | Software Engineer | Backend Specialist">
+    <meta property="og:description" content="Especialista em PHP, Node.js, Laravel, AWS, RabbitMQ e Otimização de Performance.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body { background: white; color: black; font-size: 10pt; }
+            .container { max-width: 100%; padding: 0; }
+            .no-print { display: none; }
+            .glass, section { border: none; background: none; box-shadow: none; padding: 0; margin-bottom: 2rem; }
+            .experience-item { page-break-inside: avoid; }
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background: var(--bg);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .name-title h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.25rem;
+        }
+
+        .role-tag {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .contact-info a:hover {
+            border-color: var(--primary);
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f172a;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .duration {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .job-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .exp-description {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .impact-points {
+            list-style: none;
+        }
+
+        .impact-point {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .impact-point::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .par-tag {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-right: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-cat h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            font-size: 0.85rem;
+            background: #f1f5f9;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+
+        .edu-main {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .edu-sub {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            header { grid-template-columns: 1fr; text-align: center; }
+            .avatar { margin: 0 auto; }
+            .exp-header { flex-direction: column; }
+            .duration { margin-top: 0.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <div class="name-title">
+                <h1>João Paulin</h1>
+                <p class="role-tag">Software Engineer | Backend Specialist | PHP & Node.js</p>
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:ppaulin23@hotmail.com">ppaulin23@hotmail.com</a></span>
+                    <span><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511973954592">(11) 97395-4592</a></span>
+                    <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/joãopaulin">linkedin.com/in/joãopaulin</a></span>
+                    <span><i class="fab fa-github"></i> <a href="https://github.com/joaopaulin">github.com/joaopaulin</a></span>
+                    <span><i class="fas fa-location-dot"></i> São Paulo, SP</span>
+                </div>
+            </div>
+            <img src="https://www.gravatar.com/avatar/342c7d2973c474c9625ff590014072d5?s=200" alt="João Paulin" class="avatar">
+        </header>
+
+        <!-- Profile Summary -->
+        <section>
+            <div class="section-title">Resumo Profissional</div>
+            <p class="exp-description">
+                Especialista em Backend com mais de 15 anos de atuação sólida em engenharia de software. Expertise no desenvolvimento de ecossistemas escaláveis e de alta performance, com foco em sistemas críticos como LMS e plataformas de alto tráfego (100k+ usuários). Entusiasta e praticante de <b>SDD (Spec Driven Development)</b> e <b>VibeCoding</b>, utilizo IA Generativa estrategicamente para acelerar o ciclo de desenvolvimento (SDLC) e garantir a qualidade técnica através de especificações rigorosas. Especialista em resolver gargalos de performance e infraestrutura.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <div class="section-title">Habilidades Técnicas</div>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h4>Backend Stack</h4>
+                    <div class="skill-list">
+                        <span class="skill-item">PHP 8.x</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Laravel</span>
+                        <span class="skill-item">CodeIgniter</span>
+                        <span class="skill-item">RESTful APIs</span>
+                        <span class="skill-item">Microsserviços</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>Data & Infra</h4>
+                    <div class="skill-list">
+                        <span class="skill-item">MySQL / MariaDB</span>
+                        <span class="skill-item">RabbitMQ</span>
+                        <span class="skill-item">Redis (Cache)</span>
+                        <span class="skill-item">AWS (EC2/Scaling)</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">SQL Tuning</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>Frontend & QA</h4>
+                    <div class="skill-list">
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">HTML5 / CSS3</span>
+                        <span class="skill-item">WordPress</span>
+                        <span class="skill-item">Selenium</span>
+                        <span class="skill-item">Robot Framework</span>
+                        <span class="skill-item">Git / Git Flow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profissional Experience -->
+        <section>
+            <div class="section-title">Experiência Profissional</div>
+
+            <!-- AprendaCerto -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="company">AprendaCerto (Plataforma LMS)</span>
+                    <span class="duration">Nov 2016 – Presente</span>
+                </div>
+                <span class="job-title">Software Engineer | Especialista PHP</span>
+                <p class="exp-description">
+                    Liderança técnica no desenvolvimento e manutenção de sistema Learning Management System utilizado por grandes corporações e mais de 100.000 usuários. Responsável pela arquitetura de APIs, microsserviços e integrações financeiras.
+                </p>
+                <div class="impact-points">
+                    <div class="impact-point"><span class="par-tag">Performance</span> Otimização de queries SQL e reestruturação de JOINs, reduzindo drasticamente o mapeamento de busca do banco.</div>
+                    <div class="impact-point"><span class="par-tag">Escalabilidade</span> Implantação de mensageria assíncrona com RabbitMQ para desacoplar calculos pesados da interface de usuário.</div>
+                    <div class="impact-point"><span class="par-tag">Integração</span> Desenvolvimento de APIs robustas para integração com ecossistemas externos e gateways de pagamento (Cielo/4all).</div>
+                </div>
+            </div>
+
+            <!-- Inovatyon -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="company">Inovatyon (Marketing & Fintech)</span>
+                    <span class="duration">Mar 2016 – Nov 2016</span>
+                </div>
+                <span class="job-title">Backend Developer</span>
+                <p class="exp-description">
+                    Desenvolvimento e manutenção do sistema de escritório virtual para franqueados e sistema de leilão online em tempo real.
+                </p>
+                <div class="impact-points">
+                    <div class="impact-point"><span class="par-tag">Finanças</span> Refatoração do core banking para suporte a precisão decimal de décimos de centavo, viabilizando novos modelos de negócio.</div>
+                    <div class="impact-point"><span class="par-tag">Infraestrutura</span> Gestão de crise e escalonamento emergencial de instâncias AWS durante lançamento de produto sob alta carga.</div>
+                </div>
+            </div>
+
+            <!-- Agência Mestre -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="company">Agência Mestre (SEO & Tech)</span>
+                    <span class="duration">Jul 2015 – Set 2015</span>
+                </div>
+                <span class="job-title">WordPress Developer</span>
+                <div class="impact-points">
+                    <div class="impact-point"><span class="par-tag">SEO</span> Desenvolvimento de soluções avançadas com CPT (Custom Post Types) e Custom Fields para sites de alto desempenho.</div>
+                </div>
+            </div>
+
+            <!-- ZAW -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="company">ZAW (Indústria Criativa)</span>
+                    <span class="duration">Fev 2013 – Dez 2014</span>
+                </div>
+                <span class="job-title">PHP Developer</span>
+                <p class="exp-description">
+                    Desenvolvimento de backoffices administrativos e sistemas de votação pública segura.
+                </p>
+                <div class="impact-points">
+                    <div class="impact-point"><span class="par-tag">Segurança</span> Criação de sistema de votação robusto para o Prêmio Governador de SP por 3 anos consecutivos.</div>
+                    <div class="impact-point"><span class="par-tag">Gestão</span> Desenvolvimento de ERP interno em CodeIgniter para gerenciamento centralizado de projetos.</div>
+                </div>
+            </div>
+
+            <!-- Agência Emporium -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="company">Agência Emporium</span>
+                    <span class="duration">Mar 2010 – Jan 2013</span>
+                </div>
+                <span class="job-title">PHP Developer</span>
+                <div class="impact-points">
+                    <div class="impact-point"><span class="par-tag">Automação</span> Criação de hotsites com cronjobs para automação total de relatórios de pedidos em CSV.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <div class="section-title">Formação Acadêmica</div>
+            <div class="edu-item">
+                <div class="edu-main">Análise e Desenvolvimento de Sistemas</div>
+                <div class="edu-sub">Faculdade Impacta de Tecnologia | 2010 - 2012</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-main">Técnico em Eletrônica</div>
+                <div class="edu-sub">ETE Getúlio Vargas | 2004 - 2005</div>
+            </div>
+        </section>
+
+        <!-- Languages & Interests -->
+        <section>
+            <div class="section-title">Idiomas & Interesses</div>
+            <div class="edu-item">
+                <div class="edu-main">Português: <span class="edu-sub">Nativo</span></div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-main">Inglês: <span class="edu-sub">Intermediário (Leitura Técnica)</span></div>
+            </div>
+        </section>
+
+        <footer class="no-print">
+            © 2026 João Paulin — Gerado via <strong>Spec Driven Development</strong> assistido por IA.
+        </footer>
+
+    </div>
+
+</body>
+</html>
